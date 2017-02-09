@@ -4,3 +4,106 @@ block append head
 	meta(name="keywords" content="")
 	title Главная страница
 block content
+	include includes/components/_main-slider
+	// как выбрать книгу
+	.container
+		.title.text-center Как выбрать фотокнигу?
+		.row.p-b-30
+			.col-sm-6.m-b-20
+				iframe(width="100%" height="380" src="https://www.youtube.com/embed/J1J_JCflB7w" frameborder="0" allowfullscreen)
+			.col-sm-6.m-b-20
+				.description__block
+					p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis felis in lacus commodo lobortis. Phasellus eget lorem nec diam sagittis gravida. Vestibulum rutrum justo eget maximus mattis. Maecenas ligula diam, mollis nec facilisis sit amet, tincidunt faucibus erat. Morbi dignissim justo non turpis maximus scelerisque. Aliquam molestie tortor dictum egestas ultricies. Etiam tristique, mi et aliquam auctor, enim felis blandit velit, nec consequat metus velit sed ipsum. Vestibulum sed felis tincidunt enim gravida interdum a et tellus. Maecenas lectus massa, bibendum nec dignissim quis, fringilla sit amet mi.
+					p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis felis in lacus commodo lobortis. Phasellus eget lorem nec diam sagittis gravida. Vestibulum rutrum justo eget maximus mattis. Maecenas ligula diam, mollis nec facilisis sit amet, tincidunt faucibus erat. Morbi dignissim justo non turpis maximus scelerisque. Aliquam molestie tortor dictum egestas ultricies. Etiam tristique, mi et aliquam auctor, enim felis blandit velit, nec consequat metus velit sed ipsum. Vestibulum sed felis tincidunt enim gravida interdum a et tellus. Maecenas lectus massa, bibendum nec dignissim quis, fringilla sit amet mi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis felis in lacus commodo lobortis. Phasellus eget lorem nec diam sagittis gravida. Vestibulum rutrum justo eget maximus mattis. Maecenas ligula diam, mollis nec facilisis sit amet, tincidunt faucibus erat. Morbi dignissim justo non turpis maximus scelerisque. Aliquam molestie tortor dictum egestas ultricies.
+	// / как выбрать книгу
+	// выбор формата и размера
+	.format-block
+		.format-block__tab-changer
+			.container
+				.title.text-center.color-white Выберите формат и размер фотокниги
+				ul.format-block__tab-list
+					li.format-block__tab-list-item.active
+						img.format-block__tab-list-item-img(src="/img/1.png", alt="tab-img")
+						span.format-block__tab-list-item-text Книги на нитке
+					li.format-block__tab-list-item
+						img.format-block__tab-list-item-img(src="/img/2.png", alt="tab-img")
+						span.format-block__tab-list-item-text Премиум альбомы
+					li.format-block__tab-list-item
+						img.format-block__tab-list-item-img(src="/img/3.png", alt="tab-img")
+						span.format-block__tab-list-item-text Книга бабочка
+					li.format-block__tab-list-item
+						img.format-block__tab-list-item-img(src="/img/4.png", alt="tab-img")
+						span.format-block__tab-list-item-text Журнал
+					li.format-block__tab-list-item
+						img.format-block__tab-list-item-img(src="/img/5.png", alt="tab-img")
+						span.format-block__tab-list-item-text Брошюра
+		.format-block__tab-content
+			.container
+				.format-block__tab-block
+					.row
+						.col-sm-5
+							iframe(width="100%" height="315" src="https://www.youtube.com/embed/J1J_JCflB7w" frameborder="0" allowfullscreen)
+							.text-center.m-t-10
+								a.format-block__tab-block-link(href="#!") подробнее >>
+						.col-sm-7
+				.format-block__tab-block
+				.format-block__tab-block
+				.format-block__tab-block
+				.format-block__tab-block
+	// / выбор формата и размера
+	// наши приемущества
+	.advantages-block
+		.container
+			.title.text-center Наши преимущества
+			ul.advantages-block__list
+				li.advantages-block__list-item
+					.advantages-block__list-item-img-holder
+						img.advantages-block__list-item-img(src="/img/advant-1.png", alt="advantages")
+					p.advantages-block__list-item-text Оформление заказа<br>за 5 минут
+				li.advantages-block__list-item
+					.advantages-block__list-item-img-holder
+						img.advantages-block__list-item-img(src="/img/advant-2.png", alt="advantages")
+					p.advantages-block__list-item-text Изготовление за<br>3 дня
+				li.advantages-block__list-item
+					.advantages-block__list-item-img-holder
+						img.advantages-block__list-item-img(src="/img/advant-3.png", alt="advantages")
+					p.advantages-block__list-item-text Оплата при получении
+				li.advantages-block__list-item
+					.advantages-block__list-item-img-holder
+						img.advantages-block__list-item-img(src="/img/advant-4.png", alt="advantages")
+					p.advantages-block__list-item-text Доставка в любой регион за 500 рублей
+				li.advantages-block__list-item
+					.advantages-block__list-item-img-holder
+						img.advantages-block__list-item-img(src="/img/advant-5.png", alt="advantages")
+					p.advantages-block__list-item-text При заказе двух книг - доставка бесплатна!
+	// / наши приемущества
+	// тематика книги
+	.book-subject
+		.container
+			.title.text-center.color-grey Выберите тематику Вашей фотокниги
+			.book-subject__section
+				- for (i=1;i<=8;i++) {
+					if (i==1 || i==2 || i==6 || i==7 || i==8)
+						a.book-subject__section-block(href="#!")
+							img.book-subject__section-block-img(src="/img/content/photo.jpg", alt="photo")
+						a.book-subject__section-block.book-subject__section-block--left-arrow(href="#!")
+							p.book-subject__section-block-title Свадьба
+							p.book-subject__section-block-text от 3 000 рублей
+					if (i==3 || i==4)
+						a.book-subject__section-block.book-subject__section-block--right-arrow(href="#!")
+							p.book-subject__section-block-title Свадьба
+							p.book-subject__section-block-text от 3 000 рублей
+						a.book-subject__section-block(href="#!")
+							img.book-subject__section-block-img(src="/img/content/photo.jpg", alt="photo")
+				- }
+	// / тематика книги
+	// форма
+	// / форма
+	// seo текст
+	.p-t-30.p-b-30
+		.container
+			.title.text-center Текст про фотокниги
+			.description__block
+				p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis felis in lacus commodo lobortis. Phasellus eget lorem nec diam sagittis gravida. Vestibulum rutrum justo eget maximus mattis. Maecenas ligula diam, mollis nec facilisis sit amet, tincidunt faucibus erat. Morbi dignissim justo non turpis maximus scelerisque. Aliquam molestie tortor dictum egestas ultricies. Etiam tristique, mi et aliquam auctor, enim felis blandit velit, nec consequat metus velit sed ipsum. Vestibulum sed felis tincidunt enim gravida interdum a et tellus. Maecenas lectus massa, bibendum nec dignissim quis, fringilla sit amet mi.
+				p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis felis in lacus commodo lobortis. Phasellus eget lorem nec diam sagittis gravida. Vestibulum rutrum justo eget maximus mattis. Maecenas ligula diam, mollis nec facilisis sit amet, tincidunt faucibus erat. Morbi dignissim justo non turpis maximus scelerisque. Aliquam molestie tortor dictum egestas ultricies. Etiam tristique, mi et aliquam auctor, enim felis blandit velit, nec consequat metus velit sed ipsum. Vestibulum sed felis tincidunt enim gravida interdum a et tellus. Maecenas lectus massa, bibendum nec dignissim quis, fringilla sit amet mi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis felis in lacus commodo lobortis. Phasellus eget lorem nec diam sagittis gravida. Vestibulum rutrum justo eget maximus mattis. Maecenas ligula diam, mollis nec facilisis sit amet, tincidunt faucibus erat. Morbi dignissim justo non turpis maximus scelerisque. Aliquam molestie tortor dictum egestas ultricies.
+	// / seo текст

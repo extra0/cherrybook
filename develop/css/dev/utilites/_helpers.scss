@@ -30,6 +30,10 @@
 .p-b-25 {padding-bottom: 25px;}
 .p-b-30 {padding-bottom: 30px;}
 
+.color-white {color: #fff;}
+.color-ruby {color: $ruby;}
+.color-grey {color: #4b4848;}
+
 
 a:not([class]) {
 	color: $ruby;
@@ -39,4 +43,9 @@ a:not([class]) {
 		color: $ruby;
 		text-decoration: none;
 	}
+}
+.title {
+	font-family: $cav;
+	margin: 0 0 30px;
+	font-size: 36px;
 }
