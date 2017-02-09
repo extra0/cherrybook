@@ -1,1 +1,10 @@
-@include font-face(" ", "../fonts/", bold, italic, $file-formats: ttf eot svg);
+@include font-face("Caviar Dreams", "../fonts/caviardreams", normal, normal, $file-formats: ttf woff);
+@include font-face("Caviar Dreams", "../fonts/caviardreamsbold", bold, normal, $file-formats: ttf woff);
+@include font-face("Caviar Dreams", "../fonts/caviardreamsbolditalic", bold, italic, $file-formats: ttf woff);
+@include font-face("Caviar Dreams", "../fonts/caviardreamsitalic", normal, italic, $file-formats: ttf woff);
+@include font-face("HelveticaNeueCyr", "../fonts/HelveticaNeueCyr-Roman", normal, normal, $file-formats: ttf eot woff svg);
+@include font-face("HelveticaNeueCyr", "../fonts/HelveticaNeueCyr-Light", 300, normal, $file-formats: ttf eot woff svg);
+@include font-face("HelveticaNeueCyr", "../fonts/HelveticaNeueCyr-LightItalic", 300, italic, $file-formats: ttf eot woff svg);
+@include font-face("HelveticaNeueCyr", "../fonts/HelveticaNeueCyr-Italic", normal, italic, $file-formats: ttf eot woff svg);
+@include font-face("HelveticaNeueCyr", "../fonts/HelveticaNeueCyr-Bold", bold, normal, $file-formats: ttf eot woff svg);
+@include font-face("HelveticaNeueCyr", "../fonts/HelveticaNeueCyr-BoldItalic", bold, italic, $file-formats: ttf eot woff svg);

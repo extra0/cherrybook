@@ -1,4 +1,76 @@
 header.header
 	.container
-		a.header__logo(href="/")
-			img(src="img/logo.png" alt="Site Logo")
+		.row
+			.col-sm-9
+				// логотип
+				a.header__logo(href="/")
+					img(src="/img/logo.png" alt="Site Logo")
+				// / логотип
+				.header__center
+					// информация
+					.header__info
+						a.header__info-holder.header__info-holder--link(href="#!") 
+							img(src="/img/lock.png", alt="")
+							|  Вход в кабинет
+						a.header__info-holder.header__info-holder--link(href="mailto:#{email}") 
+							img(src="/img/mail.png", alt="")
+							|  #{email}
+						p.header__info-holder 
+							img(src="/img/map.png", alt="")
+							|  #{address}
+					// / информация
+					// меню
+					.header__menu
+						ul.header__menu-list
+							each item in menu
+								li.header__menu-list-item
+									a.header__menu-list-item-link(href="#!") #{item}
+					// / меню
+			.col-sm-3.text-center
+				.header__callblock
+					a.header__callblock-link(href="tel:+74957218171") #{phone}
+				.header__callback
+					a.header__callback-link(href="#!") звонок онлайн
+					span.header__callback-devider /
+					a.header__callback-link(href="#!") обратный звонок
+				.header__social
+					a.header__social-link(href="#!" target="_blank")
+						img.header__social-link-img(src="/img/inst.png", alt="social-img")
+					a.header__social-link(href="#!" target="_blank")
+						img.header__social-link-img(src="/img/fb.png", alt="social-img")
+					a.header__social-link(href="#!" target="_blank")
+						img.header__social-link-img(src="/img/vk.png", alt="social-img")
+		.row
+			.col-sm-12
+				// блок с кнопками
+				.header__buttons
+					ul.header__buttons-list
+						li.header__buttons-list-item
+							a.header__buttons-list-item-link(href="#!") Фотокниги
+							// выпадающее меню
+							.header__buttons-dropdown
+								ul.header__buttons-dropdown-list
+									li.header__buttons-dropdown-list-item
+										a.header__buttons-dropdown-list-link(href="#!")
+											img.header__buttons-dropdown-list-img(src="/img/drop-img-1.png", alt="drop-img")
+											p.header__buttons-dropdown-list-text Книги на нитке<br>от 300 руб.
+									li.header__buttons-dropdown-list-item
+										a.header__buttons-dropdown-list-link(href="#!")
+											img.header__buttons-dropdown-list-img(src="/img/drop-img-2.png", alt="drop-img")
+											p.header__buttons-dropdown-list-text Премиум альбомы<br>от 400 руб.
+									li.header__buttons-dropdown-list-item
+										a.header__buttons-dropdown-list-link(href="#!")
+											img.header__buttons-dropdown-list-img(src="/img/drop-img-3.png", alt="drop-img")
+											p.header__buttons-dropdown-list-text Книга бабочка<br>от 500 руб.
+									li.header__buttons-dropdown-list-item
+										a.header__buttons-dropdown-list-link(href="#!")
+											img.header__buttons-dropdown-list-img(src="/img/drop-img-4.png", alt="drop-img")
+											p.header__buttons-dropdown-list-text Журнал<br>от 999 руб.
+									li.header__buttons-dropdown-list-item
+										a.header__buttons-dropdown-list-link(href="#!")
+											img.header__buttons-dropdown-list-img(src="/img/drop-img-5.png", alt="drop-img")
+											p.header__buttons-dropdown-list-text Брошюра<br>от 1 300 руб.
+							// / выпадающее
+						li.header__buttons-list-item
+							a.header__buttons-list-item-link(href="#!") Интерьерная печать
+				// / блок с кнопками
