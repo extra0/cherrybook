@@ -1,4 +1,36 @@
 .footer {
-	height: 200px;
+	padding: 24px 0;
 	background: #f7f7f7;
+
+	&__develop {
+		&-img {}
+		&-text {
+			margin: 10px 0;
+			line-height: normal;
+			font-weight: 300;
+		}
+	}
+	&__menu {
+		@extend .header__menu;
+		margin: 19px 0 32px;
+		&-list {
+			@extend .header__menu-list;
+			&-item {
+				@extend .header__menu-list-item;
+				&-link {
+					@extend .header__menu-list-item-link;
+				}
+			}
+		}
+	}
+	&__info {
+		@extend .header__info;
+		&-holder {
+			@extend .header__info-holder;
+			&--link {
+				@extend .header__info-holder--link;
+
+			}
+		}
+	}
 }

@@ -1,2 +1,49 @@
 footer.footer
 	.container
+		.row
+			.col-sm-2
+				.text-center
+					img(src="/img/logo.png", alt="logo")
+					br
+					br
+					.header__social
+						a.header__social-link(href="#!" target="_blank")
+							img.header__social-link-img(src="/img/inst.png", alt="social-img")
+						a.header__social-link(href="#!" target="_blank")
+							img.header__social-link-img(src="/img/fb.png", alt="social-img")
+						a.header__social-link(href="#!" target="_blank")
+							img.header__social-link-img(src="/img/vk.png", alt="social-img")
+			.col-sm-8
+				.footer__menu
+					ul.footer__menu-list
+						each item in menu
+							li.footer__menu-list-item
+								a.footer__menu-list-item-link(href="#!") #{item}
+				.footer__info
+					a.footer__info-holder.footer__info-holder--link(href="+74957218171") 
+						img(src="/img/f-phone.png", alt="")
+						|  #{phone}
+					a.footer__info-holder.footer__info-holder--link(href="mailto:#{email}") 
+						img(src="/img/mail.png", alt="")
+						|  #{email}
+					p.footer__info-holder 
+						img(src="/img/map.png", alt="")
+						|  #{address}
+				.row
+					.col-sm-7.m-b-10
+						.row
+							.col-sm-6.m-b-10
+								div.text-underline ИНН-КПП
+								div 6663003127 — 660850001
+							.col-sm-6.m-b-10
+								div.text-underline ОГРН
+								div 1026605606620
+					.col-sm-5
+						div.text-underline Юридический Адрес
+						div 620017 г. Москва, ул. Космонавтов, 56
+						div Многоканальный телефон: 8 800 500-50-80
+			.col-sm-2
+				.footer__develop.text-center
+					a(href="#!" target="_blank")
+						img.footer__develop-img(src="/img/develop.png", alt="")
+					p.footer__develop-text Разработка сайта<br>«Два слона»

@@ -1,5 +1,6 @@
 .text-center {text-align: center;}
 .text-right {text-align: right;}
+.text-underline {text-decoration: underline;}
 
 .no-margin {margin: 0;}
 .no-padding {padding: 0;}
@@ -48,4 +49,57 @@ a:not([class]) {
 	font-family: $cav;
 	margin: 0 0 30px;
 	font-size: 36px;
+}
+
+.btn {
+	text-decoration: none;
+	background: $ruby;
+	border: none;
+	@include transition(all 0.2s ease-in-out);
+	text-transform: uppercase;
+	color: #fff;
+	font-weight: 300;
+	font-size: 18px;
+	display: inline-block;
+	border-radius: 25px;
+	padding: 12px 45px;
+	&:focus,
+	&:hover {
+		text-decoration: none;
+		color: #fff;
+		
+		background: darken($ruby, 5%);
+	}
+	&-block {
+		width: 100%;
+		display: block;
+	}
+}
+.form {
+	&-group {
+		position: relative;
+		margin-bottom: 15px;
+	}
+	&-control {
+		border-radius: 25px;
+		background: transparent;
+		border: 1px solid #949494;
+		font-weight: 300;
+		padding: 10px 40px 10px 20px;
+		width: 100%;
+		display: block;
+		@include transition(all 0.2s ease-in-out);
+		resize: none;
+		&:focus {
+			border-color: $ruby;
+			& + .form-label-img {
+				@include filter(grayscale(0));
+			}
+		}
+	}
+	&-label-img {
+		@include position(absolute, 10px 15px null null);
+		@include filter(grayscale(1));
+		@include transition(all 0.2s ease-in-out);
+	}
 }
