@@ -9,9 +9,11 @@ header.header
 				.header__center
 					// информация
 					.header__info
-						a.header__info-holder.header__info-holder--link(href="#!") 
+						a.header__info-holder.header__info-holder--link(href="#enter" data-fancybox) 
 							img(src="/img/lock.png", alt="")
 							|  Вход в кабинет
+						#enter(style="display: none;width: 400px")
+							p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur amet odio accusamus, suscipit excepturi voluptate, ratione dolores soluta iure quis mollitia animi explicabo dolorum perferendis consequuntur, ea doloremque? Corporis, cum.
 						a.header__info-holder.header__info-holder--link(href="mailto:#{email}") 
 							img(src="/img/mail.png", alt="")
 							|  #{email}
