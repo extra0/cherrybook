@@ -267,15 +267,15 @@
   font-weight: 300;
   text-align: center;
   border-radius: 50%;
-  border-width: 0;
+  border:2px solid #888;
+  @include transition(all 0.2s ease-in-out);
   cursor: pointer;
   background: #fff;
-  transition: background .2s;
   box-sizing: border-box;
   z-index: 2
 }
 .fancybox-close-small:focus {
-  outline: 1px dotted #888
+  outline: none;
 }
 .fancybox-slide--video .fancybox-close-small {
   top: -36px;
@@ -283,8 +283,8 @@
   background: transparent
 }
 .fancybox-close-small:hover {
-  color: #555;
-  background: #eee
+  color: $ruby;
+  border: 2px solid $ruby;
 }
 .fancybox-caption-wrap {
   position: absolute;

@@ -1,7 +1,7 @@
 header.header
 	.container
 		.row
-			.col-sm-9
+			.col-sm-12.col-md-9
 				// логотип
 				a.header__logo(href="/")
 					img(src="/img/logo.png" alt="Site Logo")
@@ -9,11 +9,9 @@ header.header
 				.header__center
 					// информация
 					.header__info
-						a.header__info-holder.header__info-holder--link(href="#enter" data-fancybox) 
+						a.header__info-holder.header__info-holder--link(href="#enter-window" data-fancybox) 
 							img(src="/img/lock.png", alt="")
 							|  Вход в кабинет
-						#enter(style="display: none;width: 400px")
-							p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur amet odio accusamus, suscipit excepturi voluptate, ratione dolores soluta iure quis mollitia animi explicabo dolorum perferendis consequuntur, ea doloremque? Corporis, cum.
 						a.header__info-holder.header__info-holder--link(href="mailto:#{email}") 
 							img(src="/img/mail.png", alt="")
 							|  #{email}
@@ -28,20 +26,23 @@ header.header
 								li.header__menu-list-item
 									a.header__menu-list-item-link(href="#!") #{item}
 					// / меню
-			.col-sm-3.text-center
-				.header__callblock
-					a.header__callblock-link(href="tel:+74957218171") #{phone}
-				.header__callback
-					a.header__callback-link(href="#!") звонок онлайн
-					span.header__callback-devider /
-					a.header__callback-link(href="#!") обратный звонок
-				.header__social
-					a.header__social-link(href="#!" target="_blank")
-						img.header__social-link-img(src="/img/inst.png", alt="social-img")
-					a.header__social-link(href="#!" target="_blank")
-						img.header__social-link-img(src="/img/fb.png", alt="social-img")
-					a.header__social-link(href="#!" target="_blank")
-						img.header__social-link-img(src="/img/vk.png", alt="social-img")
+			.col-sm-12.col-md-3.text-center.col-sm-push-5.col-md-push-0.header__right-block
+				.row
+					.col-md-12.col-sm-5
+						.header__callblock
+							a.header__callblock-link(href="tel:+74957218171") #{phone}
+						.header__callback
+							a.header__callback-link(href="#!") звонок онлайн
+							span.header__callback-devider /
+							a.header__callback-link(href="#callback" data-fancybox) обратный звонок
+					.col-md-12.col-sm-7
+						.header__social
+							a.header__social-link(href="#!" target="_blank")
+								img.header__social-link-img(src="/img/inst.png", alt="social-img")
+							a.header__social-link(href="#!" target="_blank")
+								img.header__social-link-img(src="/img/fb.png", alt="social-img")
+							a.header__social-link(href="#!" target="_blank")
+								img.header__social-link-img(src="/img/vk.png", alt="social-img")
 		.row
 			.col-sm-12
 				// блок с кнопками

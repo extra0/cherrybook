@@ -1,0 +1,32 @@
+// модальное входа
+.modal#enter-window
+	.modal__header
+		.modal__header-title Для входа введите Ваши<br>логин и пароль
+	.modal__body
+		.text-center
+			form(action="#!")
+				.form-group
+					input.form-control(type="text" placeholder="Логин")
+					img.form-label-img(src="/img/name.png", alt="")
+				.form-group
+					input.form-control(type="password" placeholder="Пароль")
+					img.form-label-img(src="/img/lock.png", alt="")
+				.form-group
+					button.btn(type="submit") Войти
+// / модальное входа
+// обратный звонок
+.modal#callback
+	.modal__header
+		.modal__header-title Введите ваши данные
+	.modal__body
+		.text-center
+			form(action="#!")
+				.form-group
+					input.form-control(type="text" placeholder="Ваше имя")
+					img.form-label-img(src="/img/name.png", alt="")
+				.form-group
+					input.form-control(type="tel" placeholder="Ваш телефон")
+					img.form-label-img(src="/img/f-phone.png", alt="")
+				.form-group
+					button.btn(type="submit") Перезвонить
+// / обратный звонок 
