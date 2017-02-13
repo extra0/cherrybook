@@ -3,7 +3,9 @@
 	background: #f7f7f7;
 
 	&__develop {
-		&-img {}
+		&-logo {
+			@include position(absolute, null 15px 0  null);
+		}
 		&-text {
 			margin: 10px 0;
 			line-height: normal;

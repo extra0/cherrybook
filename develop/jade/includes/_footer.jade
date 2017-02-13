@@ -13,7 +13,7 @@ footer.footer
 							img.header__social-link-img(src="/img/fb.png", alt="social-img")
 						a.header__social-link(href="#!" target="_blank")
 							img.header__social-link-img(src="/img/vk.png", alt="social-img")
-			.col-sm-8
+			.col-sm-10.col-md-8
 				.footer__menu
 					ul.footer__menu-list
 						each item in menu
@@ -30,7 +30,7 @@ footer.footer
 						img(src="/img/map.png", alt="")
 						|  #{address}
 				.row
-					.col-sm-7.m-b-10
+					.col-sm-12.col-md-7.m-b-10
 						.row
 							.col-sm-7.m-b-10
 								div.text-underline ИНН-КПП
@@ -38,11 +38,14 @@ footer.footer
 							.col-sm-5.m-b-10
 								div.text-underline ОГРН
 								div 1026605606620
-					.col-sm-5
+					.col-sm-12.col-md-5
 						div.text-underline Юридический Адрес
-						div 620017 г. Москва, ул. Космонавтов, 56
+						div 620017 г. Москва, ул. Космонавтов, 56 
 						div Многоканальный телефон: 8 800 500-50-80
-			.col-sm-2
+						.visible-sm
+							a(href="#!" target="_blank")
+								img.footer__develop-logo(src="/img/develop.png", alt="")
+			.col-sm-2.hidden-sm
 				.footer__develop.text-center
 					a(href="#!" target="_blank")
 						img.footer__develop-img(src="/img/develop.png", alt="")
