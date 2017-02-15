@@ -1,9 +1,296 @@
 @media (max-width: 767px) {
-	
+	.header {
+		padding: 0 0 10px 0;
+		&__logo {
+			position: relative;
+			z-index: 3;
+			width: 91px;
+		}
+		&__center {
+			margin: 0 0px 0 120px;
+		}
+		&__menu {
+			margin: 0;
+			padding: 0;
+			border: none;
+			@include position(absolute, -12px 0 null 0);
+			&-list {
+				background: #a5adc0;
+				z-index: 10;
+				position: relative;
+				opacity: 0;
+				padding: 25px 0;
+				pointer-events: none;
+				&-item {
+					display: block;
+					&-link {
+						padding: 4px 0;
+						font-size: 16px;
+						display: block;
+						color: #fff;
+					}
+				}
+			}
+		}
+		&__info {
+			text-align: left;
+			padding-top: 14px;
+			margin-bottom: 15px;
+			&-holder {
+				border-right: none!important;
+				padding: 0;
+				margin-right: 40px;
+				margin-bottom: 7px;
+				display: block;
+				&:not(.header__info-holder--link) {
+					margin-right: 0;
+				}
+			}
+		}
+		&__buttons {
+			&-list {
+				&-item {
+
+					&-link  {
+						width: 200px;
+						padding: 10px;
+					}
+				}
+			}
+			&-dropdown {
+				padding: 25px 0;
+				top: 45px;
+				max-width: 	400px;
+				right: 0;
+				margin: 0 auto;
+				&-list {
+					display: block;
+					text-align: left;
+					padding: 25px;
+					&:before {
+						top: 0;
+						left: 20%;
+					}
+					&-img {
+						display: none;
+					}
+					&-item {
+						display: block;
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
+	.title {
+		font-size: 26px;
+	}
+	.main-slider {
+		$slider-height: 250px;
+		.bx-wrapper {
+			min-height: $slider-height;
+			.bx-viewport {
+				min-height: $slider-height;
+				div {
+					min-height: $slider-height;
+					background-size: auto 100%!important;
+					background-position: 150% center!important;
+				}
+				.container {
+					padding: 0 0 0 15px;
+				}
+			}
+		}
+		&__list {
+			&-item {
+				&-text {
+					font-size: 18px;
+					margin: 50px 0 0 0;
+				}
+			}
+		}
+	}
+	.description {
+		&__frame {
+			height: 250px;
+		}
+	}
+	.advantages-block {
+		&__list {
+			@include flex-wrap(wrap);
+			&-item {
+				width: 45%;
+			}
+		}
+	}
+	.form-block {
+		background-size: cover;
+		&__inner {
+			&:before {
+				display: none;
+			}
+			&-slider-wrap {
+				.bx-wrapper img {
+					margin: 0 auto;
+				}
+			}
+			&-description {
+				max-width: 450px;
+				margin: 0 auto;
+			}
+		}
+	}
+	.format-block {
+		&__tab {
+			&-list {
+				padding: 0;
+				&-item {
+					padding: 20px 10px;
+					line-height: normal;
+					@include display(flex);
+					@include align-items(center);
+					@include justify-content(center);
+					&-text {
+						margin: 0;
+					}
+				}
+			}
+			&-block {
+				padding: 0;
+				&-list {
+					&-item {
+						width: 32%;
+					}
+				}
+				&-iframe {
+					height: 250px;
+				}
+			}
+		}
+	}
+	.book-subject {
+		&__section {
+			margin: 0 auto;
+			max-width: 550px;
+			&-block {
+				height: auto;
+				width: 100%;
+				border-bottom: 1px solid #ddd;
+				&:nth-child(1),
+				&:nth-child(4),
+				&:nth-child(5),
+				&:nth-child(7) {
+					flex-direction:row-reverse;
+				}
+				&-img {
+					height: 100%;
+					width: 100%;
+				}
+				&-inner {
+					&:before {
+						display: none;
+					}
+				}
+			}
+		}
+	}
+	.footer {
+		&__info {
+			text-align: left;
+		    padding-top: 0px;
+		    margin-bottom: 42px;
+		    margin-top: 10px;
+		}
+	}
 }
 @media (max-width: 499px) {
 	.modal {
 		width: 100%;
+	}
+	.header {
+		margin-bottom: 25px;
+		padding-top: 10px;
+		&__logo {
+			max-width: 42px;
+		}
+		&__info {
+			&-holder {
+				margin-right: 0;
+				font-size: 12px;
+			}
+		}
+		&__buttons {
+			&-list {
+				width: 100%;
+				&-item {
+					width: 50%;
+					&-link {
+						width: auto;
+						font-size: 12px;
+						padding: 10px 0;
+					}
+				}
+			}
+		}
+		&__center {
+			margin: 0;
+			clear: both;
+		}
+	}
+	.advantages-block {
+		&__list {
+			margin-top: 25px;
+			&-item {
+				width: 100%;
+			}
+		}
+	}
+	.title {
+		font-size: 18px;
+		margin-bottom: 15px;
+	}
+	.format-block {
+		&__tab {
+			&-list {
+				margin: 0 -15px;
+				&-item {
+					padding: 10px 5px;
+					&-text {
+						font-size: 12px;
+					}
+				}
+			}
+			&-block {
+				padding: 0;
+				&-list {
+					&-item {
+						width: 48%;
+					}
+				}
+				&-iframe {
+					height: 180px;
+				}
+			}
+		}
+	}
+	.book-subject {
+		&__section {
+			&-block {
+				&-title {
+					font-size: 16px;
+					padding: 0 6px;
+					line-height: normal;
+				}
+				&-text {
+					font-size: 12px;
+				}
+				&-inner {
+					&:before {
+						display: none;
+					}
+				}
+			}
+		}
 	}
 }
 @media (min-width: 768px) and (max-width: 991px) {
@@ -69,12 +356,18 @@
 	.book-subject {
 		&__section {
 			&-block  {
-				height: 150px;
-				&--left-arrow,
-				&--right-arrow {
-					&:before {
-						top: calc(60% - 24px);	
-					}
+				max-height: 119px;
+				overflow: hidden;
+				&-inner {
+					&--left-arrow,
+					&--right-arrow {
+						&:before {
+							top: calc(60% - 24px);	
+						}
+					}	
+				}
+				&-title {
+					font-size: 18px;
 				}
 			}
 		}

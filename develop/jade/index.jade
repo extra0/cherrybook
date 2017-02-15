@@ -10,7 +10,7 @@ block content
 		.title.text-center Как выбрать фотокнигу?
 		.row.p-b-30
 			.col-sm-10.col-sm-offset-1.col-md-offset-0.col-md-6.m-b-20
-				iframe(width="100%" height="380" src="https://www.youtube.com/embed/J1J_JCflB7w" frameborder="0" allowfullscreen)
+				iframe.description__frame(width="100%" height="380" src="https://www.youtube.com/embed/J1J_JCflB7w" frameborder="0" allowfullscreen)
 			.col-sm-12.col-md-6.m-b-20
 				.description__block
 					p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis felis in lacus commodo lobortis. Phasellus eget lorem nec diam sagittis gravida. Vestibulum rutrum justo eget maximus mattis. Maecenas ligula diam, mollis nec facilisis sit amet, tincidunt faucibus erat. Morbi dignissim justo non turpis maximus scelerisque. Aliquam molestie tortor dictum egestas ultricies. Etiam tristique, mi et aliquam auctor, enim felis blandit velit, nec consequat metus velit sed ipsum. Vestibulum sed felis tincidunt enim gravida interdum a et tellus. Maecenas lectus massa, bibendum nec dignissim quis, fringilla sit amet mi.
@@ -23,26 +23,26 @@ block content
 				.title.text-center.color-white Выберите формат и размер фотокниги
 				ul.format-block__tab-list
 					li.format-block__tab-list-item.active
-						.format-block__tab-list-item-img.hidden-sm
+						.format-block__tab-lis.hidden-xst-item-img.hidden-sm
 						span.format-block__tab-list-item-text Книги на нитке
 					li.format-block__tab-list-item
-						.format-block__tab-list-item-img.hidden-sm
+						.format-block__tab-list-item-img.hidden-sm.hidden-xs
 						span.format-block__tab-list-item-text Премиум альбомы
 					li.format-block__tab-list-item
-						.format-block__tab-list-item-img.hidden-sm
+						.format-block__tab-list-item-img.hidden-sm.hidden-xs
 						span.format-block__tab-list-item-text Книга бабочка
 					li.format-block__tab-list-item
-						.format-block__tab-list-item-img.hidden-sm
+						.format-block__tab-list-item-img.hidden-sm.hidden-xs
 						span.format-block__tab-list-item-text Журнал
 					li.format-block__tab-list-item
-						.format-block__tab-list-item-img.hidden-sm
+						.format-block__tab-list-item-img.hidden-sm.hidden-xs
 						span.format-block__tab-list-item-text Брошюра
 		.format-block__tab-content
 			.container
 				.format-block__tab-block.active
 					.row
 						.col-md-5.col-sm-8.col-sm-offset-2.col-md-offset-0.m-b-30
-							iframe(width="100%" height="315" src="https://www.youtube.com/embed/J1J_JCflB7w" frameborder="0" allowfullscreen)
+							iframe.format-block__tab-block-iframe(width="100%" height="315" src="https://www.youtube.com/embed/J1J_JCflB7w" frameborder="0" allowfullscreen)
 							.text-center.m-t-10
 								a.format-block__tab-block-link(href="#!") подробнее >>
 						.col-md-7.col-sm-12
@@ -119,17 +119,19 @@ block content
 			.book-subject__section
 				- for (i=1;i<=8;i++) {
 					if (i==1 || i==2 || i==6 || i==7 || i==8)
-						a.book-subject__section-block(href="#!")
-							img.book-subject__section-block-img(src="/img/content/photo.jpg", alt="photo")
-						a.book-subject__section-block.book-subject__section-block--left-arrow(href="#!")
-							p.book-subject__section-block-title Свадьба
-							p.book-subject__section-block-text от 3 000 рублей
+						a.book-subject__section-block.left-arrow(href="#!")
+							.book-subject__section-block-img-holder
+								img.book-subject__section-block-img(src="/img/content/photo.jpg", alt="photo")
+							.book-subject__section-block-inner
+								p.book-subject__section-block-title Свадьба
+								p.book-subject__section-block-text от 3 000 руб.
 					if (i==3 || i==4)
-						a.book-subject__section-block.book-subject__section-block--right-arrow(href="#!")
-							p.book-subject__section-block-title Свадьба
-							p.book-subject__section-block-text от 3 000 рублей
-						a.book-subject__section-block(href="#!")
-							img.book-subject__section-block-img(src="/img/content/photo.jpg", alt="photo")
+						a.book-subject__section-block.right-arrow(href="#!")
+							.book-subject__section-block-inner
+								p.book-subject__section-block-title Какой то праздник
+								p.book-subject__section-block-text от 3 000 руб.
+							.book-subject__section-block-img-holder(href="#!")
+								img.book-subject__section-block-img(src="/img/content/photo.jpg", alt="photo")
 				- }
 	// / тематика книги
 	// форма
@@ -140,7 +142,7 @@ block content
 				.row
 					.col-sm-12.col-md-7
 						.row
-							.col-sm-6
+							.col-sm-6.xs-text-center
 								p.form-block__inner-title бесплатная книга!
 								.form-block__inner-slider-wrap
 									ul.form-block__inner-slider
@@ -151,19 +153,20 @@ block content
 										li.form-block__inner-slider-item
 											img.form-block__inner-slider-item-img(src="/img/content/book.png", alt="slider")
 							.col-sm-6
-								p.form-block__inner-text Введите свой e-mail и получите электронную книгу с секретами фотографирования детей, чтобы получались няшные фото!
-								p.form-block__inner-text Мы также будем присылать Вам интересные фотосоветы не чаще раза в неделю.
-								br
-								.text-center
-									form(action="#!")
-										.form-group
-											input.form-control(type="text" placeholder="Ваше имя")
-											img.form-label-img(src="/img/name.png", alt="")
-										.form-group
-											input.form-control(type="text" placeholder="Ваше e-mail")
-											img.form-label-img(src="/img/form-mail.png", alt="")
-										.form-group
-											button.btn(type="submit") Получить книгу!					
+								.form-block__inner-description
+									p.form-block__inner-text Введите свой e-mail и получите электронную книгу с секретами фотографирования детей, чтобы получались няшные фото!
+									p.form-block__inner-text Мы также будем присылать Вам интересные фотосоветы не чаще раза в неделю.
+									br
+									.text-center
+										form(action="#!")
+											.form-group
+												input.form-control(type="text" placeholder="Ваше имя")
+												img.form-label-img(src="/img/name.png", alt="")
+											.form-group
+												input.form-control(type="text" placeholder="Ваше e-mail")
+												img.form-label-img(src="/img/form-mail.png", alt="")
+											.form-group
+												button.btn(type="submit") Получить книгу!					
 	// / форма
 	// seo текст
 	.p-t-30.p-b-30

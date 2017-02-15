@@ -290,47 +290,64 @@ $slider-height: 509px;
 			color: inherit;
 		}
 		&-block {
-			width: 25%;
-			height: 199px;
+			width: 50%;
+			// height: 199px;
 			@include display(flex);
 			@include flex-wrap(wrap);
 			@include align-content(center);
 			@include justify-content(center);
 			text-align: center;
 			@include transition(all 0.2s ease-in-out);
-			background: #fff;
 			position: relative;
-			&--left-arrow {
-				&:before {
-					content: '';
-					@include position(absolute, calc(50% - 24px) null null -12px);
-					@include triangle(24px, #fff, left);
-					@include transition(all 0.2s ease-in-out);
-					z-index: 10;
-				}
-				&:hover {
+			&.left-arrow {
+				.book-subject__section-block-inner {
 					&:before {
-						@include triangle(24px, $ruby, left);
+						content: '';
+						@include position(absolute, calc(50% - 14px) null null -12px);
+						@include triangle(24px, #fff, left);
+						@include transition(all 0.2s ease-in-out);
+						z-index: 10;
+					}
+					&:hover {
+						&:before {
+							@include triangle(24px, $ruby, left);
+						}
 					}
 				}
 			}
-			&--right-arrow {
-				&:before {
-					content: '';
-					@include position(absolute, calc(50% - 24px) -12px null null);
-					@include triangle(24px, #fff, right);
-					@include transition(all 0.2s ease-in-out);
-					z-index: 10;
-				}
-				&:hover {
+			&.right-arrow {
+				.book-subject__section-block-inner {
 					&:before {
-						@include triangle(24px, $ruby, right);
+						content: '';
+						@include position(absolute, calc(50% - 14px) -12px null null);
+						@include triangle(24px, #fff, right);
+						@include transition(all 0.2s ease-in-out);
+						z-index: 10;
+					}
+					&:hover {
+						&:before {
+							@include triangle(24px, $ruby, right);
+						}
 					}
 				}
 			}
-			&:hover {
-				background: $ruby;
-				color: #fff;
+			&-img {
+				&-holder {
+					width: 50%;
+				}
+			}
+			&-inner {
+				width: 50%;
+				background: #fff;
+				position: relative;
+				@include display(flex);
+				@include align-content(center);
+				@include justify-content(center);
+				@include flex-wrap(wrap);
+				&:hover {
+					background: $ruby;
+					color: #fff;
+				}
 			}
 			&-title {
 				font-family: $cav;

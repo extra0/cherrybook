@@ -1,7 +1,7 @@
 footer.footer
 	.container
 		.row
-			.col-sm-2
+			.col-sm-2.col-xs-3.col-xxs-12
 				.text-center
 					img(src="/img/logo.png", alt="logo")
 					br
@@ -13,8 +13,8 @@ footer.footer
 							img.header__social-link-img(src="/img/fb.png", alt="social-img")
 						a.header__social-link(href="#!" target="_blank")
 							img.header__social-link-img(src="/img/vk.png", alt="social-img")
-			.col-sm-10.col-md-8
-				.footer__menu
+			.col-sm-10.col-md-8.col-xs-9.col-xxs-12
+				.footer__menu.hidden-xs
 					ul.footer__menu-list
 						each item in menu
 							li.footer__menu-list-item
@@ -45,7 +45,7 @@ footer.footer
 						.visible-sm
 							a(href="#!" target="_blank")
 								img.footer__develop-logo(src="/img/develop.png", alt="")
-			.col-sm-2.hidden-sm
+			.col-sm-2.hidden-sm.hidden-xs
 				.footer__develop.text-center
 					a(href="#!" target="_blank")
 						img.footer__develop-img(src="/img/develop.png", alt="")

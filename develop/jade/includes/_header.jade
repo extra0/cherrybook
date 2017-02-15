@@ -21,7 +21,9 @@ header.header
 					// / информация
 					// меню
 					.header__menu
-						ul.header__menu-list
+						button.header__menu-btn.visible-xs(type="button" data-toggle-class="#menu")
+							span
+						ul.header__menu-list#menu
 							each item in menu
 								li.header__menu-list-item
 									a.header__menu-list-item-link(href="#!") #{item}
@@ -35,7 +37,7 @@ header.header
 							a.header__callback-link(href="#!") звонок онлайн
 							span.header__callback-devider /
 							a.header__callback-link(href="#callback" data-fancybox) обратный звонок
-					.col-md-12.col-sm-7
+					.col-md-12.col-sm-7.hidden-xs
 						.header__social
 							a.header__social-link(href="#!" target="_blank")
 								img.header__social-link-img(src="/img/inst.png", alt="social-img")
@@ -49,31 +51,31 @@ header.header
 				.header__buttons
 					ul.header__buttons-list
 						li.header__buttons-list-item
-							a.header__buttons-list-item-link(href="#!") Фотокниги
+							a.header__buttons-list-item-link(href="#!" data-mob) Фотокниги
 							// выпадающее меню
 							.header__buttons-dropdown
 								ul.header__buttons-dropdown-list
 									li.header__buttons-dropdown-list-item
 										a.header__buttons-dropdown-list-link(href="#!")
 											img.header__buttons-dropdown-list-img(src="/img/drop-img-1.png", alt="drop-img")
-											p.header__buttons-dropdown-list-text Книги на нитке<br>от 300 руб.
+											p.header__buttons-dropdown-list-text Книги на нитке<br><span class="hidden-xs">от 300 руб.</span>
 									li.header__buttons-dropdown-list-item
 										a.header__buttons-dropdown-list-link(href="#!")
 											img.header__buttons-dropdown-list-img(src="/img/drop-img-2.png", alt="drop-img")
-											p.header__buttons-dropdown-list-text Премиум альбомы<br>от 400 руб.
+											p.header__buttons-dropdown-list-text Премиум альбомы<br><span class="hidden-xs">от 400 руб.</span>
 									li.header__buttons-dropdown-list-item
 										a.header__buttons-dropdown-list-link(href="#!")
 											img.header__buttons-dropdown-list-img(src="/img/drop-img-3.png", alt="drop-img")
-											p.header__buttons-dropdown-list-text Книга бабочка<br>от 500 руб.
+											p.header__buttons-dropdown-list-text Книга бабочка<br><span class="hidden-xs">от 500 руб.</span>
 									li.header__buttons-dropdown-list-item
 										a.header__buttons-dropdown-list-link(href="#!")
 											img.header__buttons-dropdown-list-img(src="/img/drop-img-4.png", alt="drop-img")
-											p.header__buttons-dropdown-list-text Журнал<br>от 999 руб.
+											p.header__buttons-dropdown-list-text Журнал<br><span class="hidden-xs">от 999 руб.</span>
 									li.header__buttons-dropdown-list-item
 										a.header__buttons-dropdown-list-link(href="#!")
 											img.header__buttons-dropdown-list-img(src="/img/drop-img-5.png", alt="drop-img")
-											p.header__buttons-dropdown-list-text Брошюра<br>от 1 300 руб.
+											p.header__buttons-dropdown-list-text Брошюра<br><span class="hidden-xs">от 1 300 руб.</span>
 							// / выпадающее
 						li.header__buttons-list-item
-							a.header__buttons-list-item-link(href="#!") Интерьерная печать
+							a.header__buttons-list-item-link(href="#!" data-mob) Интерьерная печать
 				// / блок с кнопками
