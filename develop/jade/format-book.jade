@@ -1,0 +1,93 @@
+extends includes/_layout
+block append head
+	meta(name="description" content="")
+	meta(name="keywords" content="")
+	title Формат фотокниги
+block content
+	include includes/components/_breadcrumbs
+	.gray-bg.p-t-20.bottom-shadow
+		.container
+			h1.title.text-center Премиум-альбомы
+			.row.p-b-30
+				.col-sm-10.col-sm-offset-1.col-md-offset-0.col-md-6.m-b-20
+					iframe.description__frame(width="100%" height="380" src="https://www.youtube.com/embed/J1J_JCflB7w" frameborder="0" allowfullscreen)
+				.col-sm-12.col-md-6.m-b-20
+					.description__block
+						.h4 Выберите размер премиум-альбома:
+						ul.format-block__tab-block-list
+							li.format-block__tab-block-list-item
+								a(href="#!")
+									img.format-block__tab-block-list-item-img(src="img/form-1.png", alt="")
+								p.format-block__tab-block-list-item-text 145 стр.
+								p.format-block__tab-block-list-item-price 6 440 руб.
+								p.format-block__tab-block-list-item-note 2 доп. страницы<br>+ 320 руб.
+							li.format-block__tab-block-list-item
+								a(href="#!")
+									img.format-block__tab-block-list-item-img(src="img/form-2.png", alt="")
+								p.format-block__tab-block-list-item-text 100 стр.
+								p.format-block__tab-block-list-item-price 3 600 руб.
+								p.format-block__tab-block-list-item-note 2 доп. страницы<br>+ 120 руб.
+							li.format-block__tab-block-list-item
+								a(href="#!")
+									img.format-block__tab-block-list-item-img(src="img/form-1.png", alt="")
+								p.format-block__tab-block-list-item-text 145 стр.
+								p.format-block__tab-block-list-item-price 6 440 руб.
+								p.format-block__tab-block-list-item-note 2 доп. страницы<br>+ 320 руб.
+							li.format-block__tab-block-list-item
+								a(href="#!")
+									img.format-block__tab-block-list-item-img(src="img/form-1.png", alt="")
+								p.format-block__tab-block-list-item-text 100 стр.
+								p.format-block__tab-block-list-item-price 3 600 руб.
+								p.format-block__tab-block-list-item-note 2 доп. страницы<br>+ 120 руб.
+							li.format-block__tab-block-list-item
+								a(href="#!")
+									img.format-block__tab-block-list-item-img(src="img/form-2.png", alt="")
+								p.format-block__tab-block-list-item-text 145 стр.
+								p.format-block__tab-block-list-item-price 6 440 руб.
+								p.format-block__tab-block-list-item-note 2 доп. страницы<br>+ 320 руб.
+							li.format-block__tab-block-list-item
+								a(href="#!")
+									img.format-block__tab-block-list-item-img(src="img/form-1.png", alt="")
+								p.format-block__tab-block-list-item-text 100 стр.
+								p.format-block__tab-block-list-item-price 3 600 руб.
+								p.format-block__tab-block-list-item-note 2 доп. страницы<br>+ 120 руб.
+	// варианты
+	.premium-section.bottom-shadow
+		.container
+			h1.title.text-center Дополнительные варианты оформления премиум-альбомов
+			.row
+				- for (i=1;i<=3;i++) {
+					.col-sm-4
+						.premium-section__block
+							p.premium-section__block-title С золотым тиснением
+							.premium-section__block-slider
+								ul.premium-section__slider(image-slider)
+									- for (k=1;k<=3;k++) {
+										li.premium-section__slider-item
+											img.premium-section__slider-item-img(src="img/content/work.jpg", alt="")
+									-}
+							p.premium-section__block-text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis felis in lacus commodo lobortis. Phasellus eget lorem nec diam sagittis gravida. Vestibulum rutrum justo eget maximus mattis. Maecenas ligula diam, mollis nec facilisis sit amet, tincidunt faucibus erat. Morbi dignissim justo non turpis maximus scelerisque. Aliquam molestie tortor dictum egestas ultricies. Etiam tristique, mi et aliquam auctor, enim felis blandit velit, nec consequat metus velit sed ipsum.
+							.text-center
+								a.premium-section__block-price(href="#!") + 100 руб.
+				- }
+			.text-center
+				a.btn(href="#!") другие варианты оформления
+	// / варианты
+	// seo text 
+	.wall-bg
+		.container
+			include includes/components/_description
+	// / seo text 
+	// наши работы
+	.container.p-t-30.p-b-30
+		.title.text-center Наши работы
+		.double-slider__block
+			ul.double-slider__list(double-slider)
+				- for (i=1;i<=8;i++) {
+					li.double-slider__list-item
+						img.double-slider__list-item-img(src="img/content/work.jpg", alt="")
+						p.double-slider__list-item-title Сергей Иванов, Москва
+						p.double-slider__list-item-text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis felis in lacus commodo lobortis. Phasellus eget lorem nec diam sagittis gravida. Vestibulum rutrum justo eget maximus mattis. Maecenas ligula diam, mollis nec facilisis sit amet, tincidunt faucibus erat. Morbi dignissim justo non turpis maximus scelerisque. Aliquam molestie tortor dictum egestas ultricies.
+				-}
+	// / наши работы
+	include includes/components/_description

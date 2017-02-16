@@ -1,0 +1,39 @@
+extends includes/_layout
+block append head
+	meta(name="description" content="")
+	meta(name="keywords" content="")
+	title Фотокниги
+block content
+	include includes/components/_breadcrumbs
+	.gray-bg.p-t-20
+		.container
+			h1.title.text-center Фотокниги
+			.row.p-b-30
+				.col-sm-10.col-sm-offset-1.col-md-offset-0.col-md-6.m-b-20
+					iframe.description__frame(width="100%" height="380" src="https://www.youtube.com/embed/J1J_JCflB7w" frameborder="0" allowfullscreen)
+				.col-sm-12.col-md-6.m-b-20
+					.description__block
+						.h2 Как выбрать фотокнигу?
+						p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis felis in lacus commodo lobortis. Phasellus eget lorem nec diam sagittis gravida. Vestibulum rutrum justo eget maximus mattis. Maecenas ligula diam, mollis nec facilisis sit amet, tincidunt faucibus erat. Morbi dignissim justo non turpis maximus scelerisque. Aliquam molestie tortor dictum egestas ultricies. Etiam tristique, mi et aliquam auctor, enim felis blandit velit, nec consequat metus velit sed ipsum. Vestibulum sed felis tincidunt enim gravida interdum a et tellus. Maecenas lectus massa, bibendum nec dignissim quis, fringilla sit amet mi.
+						p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis felis in lacus commodo lobortis. Phasellus eget lorem nec diam sagittis gravida. Vestibulum rutrum justo eget maximus mattis. Maecenas ligula diam, mollis nec facilisis sit amet, tincidunt faucibus erat. Morbi dignissim justo non turpis maximus scelerisque. Aliquam molestie tortor dictum egestas ultricies. Etiam tristique, mi et aliquam auctor, enim felis blandit velit, nec consequat metus velit sed ipsum. Vestibulum sed felis tincidunt enim gravida interdum a et tellus. Maecenas lectus massa, bibendum nec dignissim quis, fringilla sit amet mi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis felis in lacus commodo lobortis. Phasellus eget lorem nec diam sagittis gravida. Vestibulum rutrum justo eget maximus mattis. Maecenas ligula diam, mollis nec facilisis sit amet, tincidunt faucibus erat. Morbi dignissim justo non turpis maximus scelerisque. Aliquam molestie tortor dictum egestas ultricies.
+	.format-block
+		.format-block__tab-changer
+			.container
+				.title.text-center.color-white Выберите формат и размер фотокниги
+				.format-block__tab-list
+					a.format-block__tab-list-item(href="#!")
+						.format-block__tab-list-item-img.hidden-sm.hidden-xs
+						span.format-block__tab-list-item-text Книги на нитке
+					a.format-block__tab-list-item(href="#!")
+						.format-block__tab-list-item-img.hidden-sm.hidden-xs
+						span.format-block__tab-list-item-text Премиум альбомы
+					a.format-block__tab-list-item(href="#!")
+						.format-block__tab-list-item-img.hidden-sm.hidden-xs
+						span.format-block__tab-list-item-text Книга бабочка
+					a.format-block__tab-list-item(href="#!")
+						.format-block__tab-list-item-img.hidden-sm.hidden-xs
+						span.format-block__tab-list-item-text Журнал
+					a.format-block__tab-list-item(href="#!")
+						.format-block__tab-list-item-img.hidden-sm.hidden-xs
+						span.format-block__tab-list-item-text Брошюра
+	include includes/components/_description

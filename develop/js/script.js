@@ -9,11 +9,35 @@ $(function(){
 	});
 
 	// слайдер книги
-	$('.form-block__inner-slider').bxSlider({
+	$('[image-slider]').bxSlider({
 		controls: false,
-		auto: true,
 		adaptiveHeight: true
 	});
+
+
+	var maxSlides = 2,
+		minSlides = 2,
+		slideWidth = 460;
+	if ($(window).width() < 992) {
+		maxSlides = 1,
+		minSlides = 1;
+	} else if ($(window).width() < 1200) {
+		slideWidth = 400;
+	}
+
+
+	// двойной слайдер
+	$('[double-slider]').bxSlider({
+		pager: false,
+		adaptiveHeight: true,
+		maxSlides: maxSlides,
+		minSlider: minSlides,
+		slideWidth: slideWidth,
+		infiniteLoop: false,
+		slideMargin: 40
+	});
+
+
 
 	// табы формата
 	$('.format-block__tab-list-item').each(function(i){ $(this).attr('data-tab', i);});

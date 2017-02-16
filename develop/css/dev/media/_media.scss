@@ -242,6 +242,17 @@
 			}
 		}
 	}
+	.double-slider {
+		&__block {
+			padding: 0 30px;
+			.bx-wrapper .bx-prev {
+			  left: -30px;
+			}
+			.bx-wrapper .bx-next {
+			  right: -30px;
+			}
+		}
+	}
 }
 @media (max-width: 499px) {
 	.modal {

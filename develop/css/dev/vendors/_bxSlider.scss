@@ -109,12 +109,17 @@
   top: 50%;
   margin-top: -16px;
   outline: 0;
-  width: 31px;
-  height: 31px;
+  width: 16px;
+  height: 62px;
   text-indent: -9999px;
   z-index: 2000;
   opacity: 0.8;
-  @include transition(opacity 0.4s ease-in-out);
+  @include filter(grayscale(2));
+  @include transition(all 0.4s ease-in-out);
+}
+
+.bx-wrapper .bx-controls-direction a:hover {
+  @include filter(grayscale(0));
 }
 
 .bx-wrapper .bx-controls-direction a.disabled {

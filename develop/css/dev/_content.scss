@@ -78,13 +78,21 @@ $slider-height: 509px;
 	}
 }
 .format-block {
-	margin: 10px 0;
+	// margin: 10px 0;
 	&__tab {
 		&-list {
 			list-style-type: none;
 			padding: 0 40px;
 			margin: 0;
 			@include display(flex);
+			a {
+				color: inherit;
+				&:focus,
+				&:hover {
+					text-decoration: none;
+					color: inherit;
+				}
+			}
 			&-item {
 				width: 20%;
 				cursor: pointer;
@@ -193,13 +201,17 @@ $slider-height: 509px;
 					margin-bottom: 15px;
 					&-img {
 						margin-bottom: 3px;
+						@include transition(all 0.2s ease-in-out);
+						&:hover {
+							@include filter(contrast(2));
+						}
 					}
 					&-text {
 						font-weight: 300;
 						margin: 0 0 3px;
 					}
 					&-price {
-						font-weight: bold;
+						font-weight: bold!important;
 						margin: 0 0 3px;
 						font-size: 16px;
 					}
@@ -339,6 +351,7 @@ $slider-height: 509px;
 				width: 50%;
 				background: #fff;
 				position: relative;
+				@include transition(all 0.2s ease-in-out);
 				@include display(flex);
 				@include align-content(center);
 				@include justify-content(center);
@@ -534,6 +547,113 @@ $slider-height: 509px;
 		&-text {
 			font-weight: 300;
 			display: block;
+		}
+	}
+}
+.premium-section {
+	padding: 50px 0;
+	background: #fff;
+	&__block {
+		max-width: 360px;
+		margin: 0 auto 40px auto;
+		&-title {
+			text-align: center;
+			font-size: 18px;
+			margin: 0 0 5px;
+			font-family: $cav;
+		}
+		&-text {
+			font-weight: 300;
+			margin: 0 0 20px;
+		}
+		&-slider {
+			.bx-wrapper {
+				margin-bottom: 35px;
+			}
+			.bx-wrapper .bx-pager.bx-default-pager a {
+				width: 18px;
+				height: 18px;
+				background-color: white;
+				box-shadow: inset 0.6px 1.9px 2px rgba(0, 0, 1, 0.13);
+				border-radius: 50%;
+				position: relative;
+			}
+			.bx-wrapper .bx-pager.bx-default-pager a.active:before {
+				content: '';
+				@include position(absolute, 5px null null 5px);
+				width: 9px;
+				height: 9px;
+				border-radius: 50%;
+				background-color: #a9b0bf;
+			}
+			.bx-wrapper .bx-pager {
+				bottom: -20px;
+			}
+		}
+		&-price {
+			font-size: 20px;
+			letter-spacing: 1px;
+			color: #4b4848;
+			@include transition(all 0.2s ease-in-out);
+			border-radius: 25px;
+			border: 1px solid $ruby;
+			display: inline-block;
+			font-weight: 300;
+			padding: 6px 27px;
+			background: #fff;
+			position: relative;
+			margin: 20px 0 0;
+			&:hover,
+			&:focus {
+				color: $ruby;
+				text-decoration: none;
+			}
+			&:before {
+				content: '';
+				@include position(absolute, -15px 0 null 0);
+				margin: 0 auto;
+				width: 60px;
+				height: 15px;
+				background: url(../img/price-triangle.png) 0 0 no-repeat;
+			}
+		}
+	}
+}
+.wall-bg {
+	background: url(../img/wall.jpg) 0 0 no-repeat;
+	background-size: cover;
+	position: relative;
+	z-index: -2;
+}
+
+.double-slider {
+	&__block {
+		padding: 0 50px;
+		.bx-wrapper .bx-prev {
+		  left: -50px;
+		}
+		.bx-wrapper .bx-next {
+		  right: -50px;
+		}
+	}
+	&__list {
+		list-style-type: none;
+		padding: 0;
+		margin: 0;
+		&-item {
+			&-img {
+				margin-bottom: 20px;
+			}
+			&-title {
+				font-weight: bold;
+				font-size: 16px;
+				color: #635e5e;
+				margin: 0 0 10px;
+			}
+			&-text {
+				font-weight: 300;
+				margin: 0;
+			}
 		}
 	}
 }
