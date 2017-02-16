@@ -202,6 +202,46 @@
 		    margin-top: 10px;
 		}
 	}
+	.category-section {
+		&__menu {
+			margin-top: 30px;
+			text-align: left;
+			padding: 20px;
+			display: none;
+			max-width: 350px;
+			background: #fff;
+			border-radius: 25px;
+			border: 1px solid $ruby;
+			position: relative;
+			&:before {
+				content: '';
+				width: 35px;
+				height: 26px;
+				background: url(../img/drop-arrow.png) 0 0 no-repeat;
+				@include position(absolute, -26px null null 40px);
+			}
+			&-item {
+				padding: 0;
+				margin-bottom: 7px;
+				display: block;
+				border-right: none!important;
+			}
+			&-btn {
+				margin-bottom: 30px;
+				img {
+				    margin: -1px 5px 0 0;
+				}
+			}
+		}
+		&__block {
+			&-inner {
+				padding: 13px 16px;
+				&-title {
+					font-size: 16px;
+				}
+			}
+		}
+	}
 }
 @media (max-width: 499px) {
 	.modal {
@@ -414,6 +454,13 @@
 			}
 		}
 	}
+	.category-section {
+		&__menu {
+			&-item {
+				padding: 3px 18px;
+			}
+		}
+	}
 }
 @media (min-width: 992px) and (max-width: 1199px) {
 	.header {
@@ -470,6 +517,19 @@
 	.footer {
 		&__info {
 			margin: 12px -10px 27px 0;
+		}
+	}
+	.category-section {
+		&__block {
+			&-inner {
+				padding: 15px 20px;
+				&-title {
+					font-size: 16px;
+				}
+				&-text {
+					font-size: 13px;
+				}
+			}
 		}
 	}
 }

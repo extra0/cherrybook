@@ -49,6 +49,7 @@ a:not([class]) {
 	font-family: $cav;
 	margin: 0 0 30px;
 	font-size: 36px;
+	font-weight: 400;
 }
 
 .btn {
@@ -67,12 +68,20 @@ a:not([class]) {
 	&:hover {
 		text-decoration: none;
 		color: #fff;
-		
 		background: darken($ruby, 5%);
 	}
 	&-block {
 		width: 100%;
 		display: block;
+	}
+	&-transparent {
+		border: 1px solid $ruby;
+		background: transparent;
+		color: #4b4848;
+	}
+	&-sm {
+		padding: 9px 23px;
+		font-size: 14px;
 	}
 }
 .form {

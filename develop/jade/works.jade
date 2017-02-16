@@ -1,0 +1,42 @@
+extends includes/_layout
+block append head
+	meta(name="description" content="")
+	meta(name="keywords" content="")
+	title Наши работы
+	- bgImg = 'wall-bg';
+block content
+	include includes/components/_breadcrumbs
+	.container
+		h1.title.text-center Наши работы
+		.category-section
+			button.category-section__menu-btn.visible-xs.btn.btn-sm(type="button" data-collapse="#catalog-menu") 
+				img(src="img/catalog.png", alt="")
+				| Каталог работ
+			ul.category-section__menu#catalog-menu
+				li.category-section__menu-item
+					a.category-section__menu-item-link(href="#!") Фотокниги
+				li.category-section__menu-item
+					a.category-section__menu-item-link(href="#!") Фотообои
+				li.category-section__menu-item
+					span.category-section__menu-item-link.current Репродукции на холсте
+				li.category-section__menu-item
+					a.category-section__menu-item-link(href="#!") Фотокалендари
+				li.category-section__menu-item
+					a.category-section__menu-item-link(href="#!") Фотофутболки
+			.category-section__description <strong>Живопись</strong> - dolor sit amet, consectetur adipiscing elit. Suspendisse hendrerit, lorem in tempus porta, enim magna volutpat felis, id convallis lorem enim ac turpis. Maecenas sodales augue ullamcorper orci accumsan, non varius est dictum. Praesent et lacinia turpis. Aliquam sit amet justo fermentum nulla dignissim feugiat. Quisque aliquet, eros aliquam mattis porttitor, metus magna lobortis erat, a scelerisque nunc turpis auctor ligula. Etiam vulputate ipsum ut metus vestibulum lobortis. Pellentesque eget cursus purus. Nam sed dolor eget ante pharetra maximus. Cras erat mi, rutrum vel risus at, vestibulum sollicitudin nunc. Donec ipsum est, consectetur vitae condimentum a
+			.row
+				- for (i=1;i<=9;i++) {
+				.col-sm-6.col-md-4
+					.category-section__block
+						a.category-section__block-link(href="img/content/work.jpg" data-fancybox="gallery" data-caption="<span class='category-section__modal-title'>Возможный заголовок</span><span class='category-section__modal-text'>Тут плавно снизу закрывая часть картинки выезжает сопроводительный, поясняющий что-либо посетителю.</span>")
+							img.category-section__block-img(src="img/content/work.jpg", alt="work-img")
+							.category-section__block-inner
+								p.category-section__block-inner-title Возможный заголовок
+								if (i==2)
+									p.category-section__block-inner-text Тут плавно снизу закрывая часть картинки выезжает сопроводительный, поясняющий что-либо посетителю. выезжает сопроводительный, поясняющий что-либо посетителю.
+								else 
+									p.category-section__block-inner-text Тут плавно снизу закрывая часть картинки выезжает сопроводительный, поясняющий что-либо посетителю.
+				- }
+			.text-center
+				a.btn.btn-transparent(href="#!") Показать еще 15
+	include includes/components/_description

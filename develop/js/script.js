@@ -32,6 +32,12 @@ $(function(){
 		$(''+ $(this).attr('data-toggle-class')+'').toggleClass('active');
 	});
 
+	// collapse
+	$('[data-collapse]').on('click', function(){
+		$(this).toggleClass('active');
+		$(''+ $(this).attr('data-collapse')+'').slideToggle(200);
+	});
+
 
 	// определяем мобильный ли браузер
 	var isMobile = {
