@@ -1,0 +1,54 @@
+extends includes/_layout
+block append head
+	meta(name="description" content="")
+	meta(name="keywords" content="")
+	title Подбор фотокниги
+	- bgImg = 'wall-bg';
+block content
+	include includes/components/_breadcrumbs
+	.container
+		h1.title.text-center Фотокниги по тематикам
+		h2.subtitle.text-center.h2(style="margin-top:-25px;") Подбор фотокниги
+		.category-section
+			button.category-section__menu-btn.visible-xs.btn.btn-sm(type="button" data-collapse="#catalog-menu") 
+				img(src="img/filter.png", alt="")
+				| Фильтр подбора
+			ul.category-section__menu#catalog-menu
+				li.category-section__menu-item
+					a.category-section__menu-item-link(href="#!") 
+						| Кому
+						span.category-section__menu-item-link-check *
+					.category-section__dropdown-wrap
+						ul.category-section__dropdown
+							- for (i=1;i<=7;i++) {
+								li.category-section__dropdown-item
+									a.category-section__dropdown-item-link(href="#!") Жертвоприношения
+							- }
+				li.category-section__menu-item
+					a.category-section__menu-item-link(href="#!") К событию
+				li.category-section__menu-item
+					a.category-section__menu-item-link.current(href="#!") 
+						| Тематика
+						span.category-section__menu-item-link-check *
+					.category-section__dropdown-wrap
+						ul.category-section__dropdown
+							- for (i=1;i<=7;i++) {
+								li.category-section__dropdown-item
+									a.category-section__dropdown-item-link(href="#!") Жертвоприношения
+							- }
+				li.category-section__menu-item
+					a.category-section__menu-item-link(href="#!") Стиль
+				li.category-section__menu-item
+					a.category-section__menu-item-link(href="#!") Размер
+				li.category-section__menu-item
+					a.category-section__menu-item-link(href="#!") Переплет
+			.row
+				- for (i=1;i<=9;i++) {
+				.col-sm-6.col-md-4
+					.category-section__block
+						a.category-section__block-link(href="#!")
+							p.category-section__block-title Фотокнига «Свадьба»
+							img.category-section__block-img(src="img/content/work.jpg", alt="work-img")
+				- }
+			include includes/components/_pagination		
+	include includes/components/_description
